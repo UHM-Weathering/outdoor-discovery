@@ -9,19 +9,22 @@ if (!isset($_GET["page"])) {
 } else {
 	require_once(rtrim(dirname(__DIR__ . "../"), "/") . "/pages/404.php");
 }
+?>
 
-echo "<html>\n";
-echo "<head>\n";
-echo "	<title>" . (isset($page_title) ? $page_title . " - " : "") . "UHM Weathering</title>\n";
-echo "</head>\n";
+<!doctype html>
+<html>
 
-echo "<body>\n";
-echo "	<div>\n";
-echo "	Header\n";
-echo "	</div>\n";
-echo $html;
-echo "	<div>\n";
-echo "	Footer\n";
-echo "	</div>\n";
-echo "</body>\n";
-echo "</html>\n";
+<head>
+  <title><?php echo (isset($page_title) ? $page_title . " - " : "") . "UHM Weathering"; ?></title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+</head>
+
+<body>
+  <div>Header</div>
+  <?php echo $html; ?>
+  <div>Footer</div>
+</body>
+
+</html>
