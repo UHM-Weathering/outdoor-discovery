@@ -1,5 +1,5 @@
 # Overview
-So far, we have created a phpMyAdmin database with tables to handle users, sessions, login logs, and user agents. The link to our project's GitHub can be found here: https://github.com/UHM-Weathering/outdoor-discovery
+So far, we have created a phpMyAdmin database with tables to handle users, sessions, login logs, and user agents.  We have also created a login page and a page system.
 
 # Complete
 1. Created table handling users (John)
