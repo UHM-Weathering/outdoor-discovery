@@ -1,6 +1,6 @@
 <?php
 
-$title = "Login";
+$page_title = "Login";
 
 $html = <<<END
 <style type=text/css>

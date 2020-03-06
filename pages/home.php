@@ -1,6 +1,6 @@
 <?php
 
-$title = "Home";
+$page_title = "Home";
 $html = "";
 $html .= '<h1>UHM Weathering</h1>' . "\n";
 $html .= '<a href="index.php?page=login">Login Page</a>' . "\n";
