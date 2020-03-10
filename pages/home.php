@@ -1,9 +1,42 @@
 <?php
 
 $page_title = "Home";
-$html = "";
-$html .= '<h1>UHM Weathering</h1>' . "\n";
-$html .= '<a href="index.php?page=login">Login Page</a>' . "\n";
+$html = <<<END
+<style type=text/css>
+  .ui container {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+</style>
+<div>
+  <div style="position: relative;">
+    <h1 style="text-align: center; margin-top: 1em; margin-bottom: 1em;">OUTDOOR DISCOVERY</h1>
+    <a href="index.php?page=login" class="ui primary basic button" style="position: absolute; top: 50%; right: 50px; transform: translateY(-50%);">
+      Login
+    </a>
+  </div>
+</div>
+<div class="container" style="padding: 14rem 0; background: url('../images/surf.svg') no-repeat right 0, linear-gradient(180deg, rgba(253,250,207,0.3617822128851541) 0%, rgba(253,250,207,0) 100%); background-size: 37rem auto; background-color: white; background-position: 80% 60%; font-size: 1.3em;">
+  <div style="margin: 0 auto; max-width: 90rem;">
+    <div style="padding-right: 50rem; text-align: left">
+      <h1 style="font-size: 3rem; line-height: 1.5;">Explore the island of Oahu</h1>
+      <div style="font-size: 1.2em;">
+        <p style="margin-bottom: 50px; margin-top: 25px;">
+          The outdoor classes offered by UH Manoa’s Student Recreation Services are a great and inexpensive way for students to explore the island of Oahu.
+        </p>
+        <button class="ui large primary button" style="background-color: #4c92ea">
+          Sign up today!
+          <i class="arrow right icon"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+
+</div>
+
+END;
 
 // sample insert
 $query = "INSERT INTO `testing` (`created`, `data`) VALUES (?, ?);";
@@ -32,3 +65,4 @@ $array_variables = array(
 );
 $result = $database->query($query, $array_variables);
 $html .= "<div>Affected rows: " . $database->affected_rows() . "</div>\n";
+?>
