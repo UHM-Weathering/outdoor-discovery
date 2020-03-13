@@ -27,11 +27,11 @@ $html = <<<END
       </div>
       <div class="field">
         <label>Password</label>
-        <input type="text" name="email" placeholder="Password">
+        <input type="text" name="password" placeholder="Password">
       </div>
       <div class="field">
         <label>Confirm Password</label>
-        <input type="text" name="email" placeholder="Confirm Password">
+        <input type="text" name="password2" placeholder="Confirm Password">
       </div>
       <button class="ui primary button" style="margin: 0 auto; display: block; width: 25%">
         Register
