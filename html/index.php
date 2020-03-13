@@ -6,6 +6,8 @@ if (!isset($_GET["page"])) {
 	require_once(rtrim(dirname(__DIR__ . "../"), "/") . "/pages/home.php");
 } else if ($_GET["page"] == "login") {
 	require_once(rtrim(dirname(__DIR__ . "../"), "/") . "/pages/login.php");
+} else if ($_GET["page"] == "signup") {
+    require_once(rtrim(dirname(__DIR__ . "../"), "/") . "/pages/signup.php");
 } else {
 	require_once(rtrim(dirname(__DIR__ . "../"), "/") . "/pages/404.php");
 }
@@ -22,9 +24,21 @@ if (!isset($_GET["page"])) {
 </head>
 
 <body>
-  <div>Header</div>
-  <?php echo $html; ?>
-  <div>Footer</div>
+<?php
+$array_messages = $message->get();
+
+if (is_array($array_messages) && !empty($array_messages)) {
+	echo "<ul>\n";
+
+	foreach ($array_messages as $value) {
+		echo "<li>" . $value . "</li>\n";
+	}
+
+	echo "</ul>\n";
+}
+
+echo $html;
+?>
 </body>
 
 </html>

@@ -24,16 +24,15 @@ $html = <<<END
         <p style="margin-bottom: 50px; margin-top: 25px;">
           The outdoor classes offered by UH Manoa’s Student Recreation Services are a great and inexpensive way for students to explore the island of Oahu.
         </p>
-        <button class="ui large primary button" style="background-color: #4c92ea">
+        <a href="index.php?page=signup" class="ui large primary button" style="background-color: #4c92ea">
           Sign up today!
           <i class="arrow right icon"></i>
-        </button>
+        </a>
       </div>
     </div>
   </div>
 </div>
 <div>
-
 </div>
 
 END;
