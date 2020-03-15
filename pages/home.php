@@ -37,6 +37,9 @@ $html = <<<END
 
 END;
 
+$user->create_user("test@example.com", "passwordA1");
+$user->process_login("test@example.com", "passwordA1");
+
 // sample insert
 $query = "INSERT INTO `testing` (`created`, `data`) VALUES (?, ?);";
 $array_variables = array(

@@ -24,7 +24,13 @@ if (!isset($_GET["page"])) {
 </head>
 
 <body>
+
 <?php
+echo $html;
+
+echo "<h2>Debug</h2>\n";
+
+unset($session); // will call __destruct() and allow for UPDATE query to be shown
 $array_messages = $message->get();
 
 if (is_array($array_messages) && !empty($array_messages)) {
@@ -36,8 +42,6 @@ if (is_array($array_messages) && !empty($array_messages)) {
 
 	echo "</ul>\n";
 }
-
-echo $html;
 ?>
 </body>
 

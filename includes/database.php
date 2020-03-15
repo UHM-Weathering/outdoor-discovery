@@ -50,6 +50,8 @@ class database {
 		return false;
 	}
 	public function query($query, $array_variables = null) {
+		global $message;
+
 		if (!$this->conn_errors()) {
 			$error = null;
 			$escaped_query = null;
@@ -75,13 +77,18 @@ class database {
 						}
 					}
 
+					$message->add("Database debug: escaped query - " . $escaped_query);
 					$result = $this->mysqli->query($escaped_query);
 
 					if ($result !== false) {
 						return $result;
+					} else {
+						$error = "query_failed";
 					}
 				}
 			}
+
+			$message->add("Database error: " . $error);
 		}
 
 		return false;

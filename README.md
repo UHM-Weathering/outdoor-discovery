@@ -11,9 +11,11 @@ So far, we have created a phpMyAdmin database with tables to handle users, sessi
 7. Created login page (Kahlin/Emily)
 8. Created Home page with login & signup buttons (Emily)
 9. Created Sign Up page (Emily)
+10. Created message class (John)
+11. Created user class (creation and login/logout) (John)
+12. Created session class (John)
 
 # Pending
-1. Session handling (John)
 2. Activities information in the database (Matt)
 4. Activity sign up (John)
 5. Activity form fill out (Emily)
