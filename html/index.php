@@ -6,8 +6,16 @@ if (!isset($_GET["page"])) {
 	require_once(rtrim(dirname(__DIR__ . "../"), "/") . "/pages/home.php");
 } else if ($_GET["page"] == "login") {
 	require_once(rtrim(dirname(__DIR__ . "../"), "/") . "/pages/login.php");
+} else if ($_GET["page"] == "addevent") {
+	require_once(rtrim(dirname(__DIR__ . "../"), "/") . "/pages/addevent.php");
 } else if ($_GET["page"] == "signup") {
-    require_once(rtrim(dirname(__DIR__ . "../"), "/") . "/pages/signup.php");
+	require_once(rtrim(dirname(__DIR__ . "../"), "/") . "/pages/signup.php");
+} else if ($_GET["page"] == "eventlist") {
+	require_once(rtrim(dirname(__DIR__ . "../"), "/") . "/pages/eventlist.php");
+} else if ($_GET["page"] == "editevent") {
+	require_once(rtrim(dirname(__DIR__ . "../"), "/") . "/pages/editevent.php");
+} elseif ($_GET["page"] == "profile") {
+    require_once(rtrim(dirname(__DIR__ . "../"), "/") . "/pages/profile.php");
 } else {
 	require_once(rtrim(dirname(__DIR__ . "../"), "/") . "/pages/404.php");
 }
@@ -24,6 +32,24 @@ if (!isset($_GET["page"])) {
 </head>
 
 <body>
+
+<div>
+  <div style="position: relative;">
+    <h1 style="text-align: center; margin-top: 1em; margin-bottom: 1em;">OUTDOOR DISCOVERY</h1>
+	<?php
+		if ($user->is_logged_in()) {
+			echo '<a href="index.php?page=sign_out" class="ui primary basic button" style="position: absolute; top: 50%; right: 50px; transform: translateY(-50%);">
+			Sign out
+		  	</a>';
+		} else {
+			echo '<a href="index.php?page=login" class="ui primary basic button" style="position: absolute; top: 50%; right: 50px; transform: translateY(-50%);">
+			Login
+		  	</a>';
+		}
+	?> 
+
+  </div>
+</div>
 
 <?php
 echo $html;
