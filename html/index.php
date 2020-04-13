@@ -35,22 +35,60 @@ if (!isset($_GET["page"])) {
 
 <body>
 
-<div>
-  <div style="position: relative;">
-    <h1 style="text-align: center; margin-top: 1em; margin-bottom: 1em;">OUTDOOR DISCOVERY</h1>
-	<?php
-		if ($user->is_logged_in()) {
-			echo '<a href="index.php?page=sign_out" class="ui primary basic button" style="position: absolute; top: 50%; right: 50px; transform: translateY(-50%);">
-			Sign out
-		  	</a>';
-		} else {
-			echo '<a href="index.php?page=login" class="ui primary basic button" style="position: absolute; top: 50%; right: 50px; transform: translateY(-50%);">
-			Login
-		  	</a>';
-		}
-	?> 
-
-  </div>
+<div class="ui container">
+	<div class="ui medium top fixed pointing menu">
+		<?php
+			if("OUTDOOR DISCOVERY" === $page_title) {
+				echo '<a href="index.php" class="active item">
+				OUTDOOR DISCOVERY
+				</a>';
+			} else {
+				echo '<a href="index.php" class="item">
+				OUTDOOR DISCOVERY
+				</a>';
+			}
+		?>
+		<?php
+			if("Event Listing" === $page_title) {
+				echo '<a href="index.php?page=eventlist" class="active item">
+				Events
+				</a>';
+			} else {
+				echo '<a href="index.php?page=eventlist" class="item">
+				Events
+				</a>';
+			}
+		?>
+		<?php
+			if ($user->is_logged_in()) {
+				if("Profile" === $page_title) {
+					echo '<a href="index.php?page=profile" class="active item">
+					Profile
+					</a>';
+				} else {
+					echo '<a href="index.php?page=profile" class="item">
+					Profile
+					</a>';
+				}
+			}
+		?>
+		<div class="right menu">
+			<div class="item">
+				<?php
+					if ($user->is_logged_in()) {
+						echo '<a href="index.php?page=sign_out" class="ui primary basic button">
+						Sign out
+						</a>';
+					} else {
+						echo '<a href="index.php?page=login" class="ui primary basic button">
+						Sign in
+						</a>';
+					}
+				?>    
+			</div>
+		</div>
+	</div>
+	<div style="height: 40px;"></div>
 </div>
 
 <?php
