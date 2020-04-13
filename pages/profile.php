@@ -50,12 +50,12 @@ $html = <<<END
             <div class="ui grid">
               <div class="ten wide column">
                 <div class="content">
-                  <div class="header">Event 1</div>
+                  <a href="index.php?page=event" class="header">Event 1</a>
                   An excellent event.
                 </div>
               </div>
               <div class="six wide column">
-                <button class="ui right floated small button">Delete Event</button>
+                <button class="ui right floated small button">Unregister</button>
               </div>
             </div>
           </div>
@@ -63,12 +63,12 @@ $html = <<<END
             <div class="ui grid">
               <div class="ten wide column">
                 <div class="content">
-                  <div class="header">Event 2</div>
+                  <a href="index.php?page=event" class="header">Event 2</a>
                   An excellent event.
                 </div>
               </div>
               <div class="six wide column">
-                <button class="ui right floated small button">Delete Event</button>
+                <button class="ui right floated small button">Unregister</button>
               </div>
             </div>
           </div>
@@ -76,12 +76,12 @@ $html = <<<END
             <div class="ui grid">
               <div class="ten wide column">
                 <div class="content">
-                  <div class="header">Event 3</div>
+                  <a href="index.php?page=event" class="header">Event 3</a>
                   An excellent event.
                 </div>
               </div>
               <div class="six wide column">
-                <button class="ui right floated small button">Delete Event</button>
+                <button class="ui right floated small button">Unregister</button>
               </div>
             </div>
           </div>

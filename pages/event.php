@@ -59,7 +59,9 @@ $html = <<<END
             <td data-label="Openings">4</td>
             <td>Apr 19 Sun @ 7:30am</td>
             <td class="center aligned">
-              <i class="large green checkmark icon"></i>
+              <div class="ui checked fitted checkbox">
+                <input type="checkbox"> <label></label>
+              </div>
             </td>
             <td>Apr 19 Sun @ 7:30am</td>
             <td class="center aligned">
@@ -71,6 +73,9 @@ $html = <<<END
             <td data-label="Openings">6</td>
             <td>May 1 Fri @ 3:00pm</td>
             <td class="center aligned">
+              <div class="ui fitted checkbox">
+                <input type="checkbox"> <label></label>
+              </div>
             </td>
             <td>May 1 Fri @ 3:00pm</td>
             <td class="center aligned">
