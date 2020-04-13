@@ -15,7 +15,7 @@ if ($user->is_admin_user()) {
   $html .= <<<END
     <div class="item">
       <div class="extra">
-        <button class="ui right floated green button">Add Event</button>
+        <a href="index.php?page=addevent" class="ui right floated green button">Add Event</a>
       </div>
     </div>
 END;
@@ -42,10 +42,10 @@ $html .= <<<END
 END;
 if ($user->is_admin_user()) {
   $html .= <<<END
-        <div class="ui right floated button">
+        <a href="index.php?page=editevent" class="ui right floated button">
           Edit Event
           <i class="right edit outline icon"></i>
-        </div>
+        </a>
 END;
 }
 $html .= <<<END
@@ -76,10 +76,10 @@ $html .= <<<END
 END;
 if ($user->is_admin_user()) {
   $html .= <<<END
-        <div class="ui right floated button">
+        <a href="index.php?page=editevent" class="ui right floated button">
           Edit Event
           <i class="right edit outline icon"></i>
-        </div>
+        </a>
 END;
 }
 $html .= <<<END
@@ -108,10 +108,10 @@ $html .= <<<END
 END;
 if ($user->is_admin_user()) {
   $html .= <<<END
-        <div class="ui right floated button">
+        <a href="index.php?page=editevent" class="ui right floated button">
           Edit Event
           <i class="right edit outline icon"></i>
-        </div>
+        </a>
 END;
 }
 $html .= <<<END
