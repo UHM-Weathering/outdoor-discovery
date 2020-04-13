@@ -14,7 +14,7 @@ if (!$user->is_admin_user()) {
 	die();
 }
 
-$page_title = "Create Event";
+$page_title = "Add Event";
 $html = <<<END
 
 <div class="ui container" style="padding-top: 10px">

@@ -72,6 +72,19 @@ if (!isset($_GET["page"])) {
 				}
 			}
 		?>
+		<?php
+			if ($user->is_admin_user()) {
+				if("Add Event" === $page_title) {
+					echo '<a href="index.php?page=addevent" class="active item">
+					Add Event
+					</a>';
+				} else {
+					echo '<a href="index.php?page=addevent" class="item">
+					Add Event
+					</a>';
+				}
+			}
+		?>
 		<div class="right menu">
 			<div class="item">
 				<?php
