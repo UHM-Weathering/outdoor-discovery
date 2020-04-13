@@ -1,53 +1,52 @@
 # Overview
-In this assignment, we have mocked up the pages of our application which are needed to receive and display data being passed to and from the database. In addition, we added a few classes.  First was the message class, which allows for grouping debug messages before printing, and prevents sending HTTP headers until the page is ready.  Second was the session class, which handles session creation, restart and data.  Finally was the user class, which handles user creation, login, logout, and basic permissions.  We also added a redirection to HTTPS whenever the connection is over HTTP, which increases security of the website.
+In this assignment, we worked on adding more functionality and fixing a few known bugs.
 Our project's GitHub can be found here: https://github.com/UHM-Weathering/outdoor-discovery
 
 # PENDING
-1.  Completely functioning event list page (Matt)
-2.  Completely functioning event page (Matt)
-3.  Registration page for events (Kahlin)
-4.  Customer profile/account page & Admin profile (Emily)
-5.  Event database (John & Matt)
-6.  Registrations database (John)
-7.  Fix session saving bug (John)
+1. Create wiki page (Emily)
+2. Create footer (Emily)
+3. Create user guide (John)
+4. Create entries for events (John)
+5. Delete event functionality (Matt)
+6. Register event functionality (Matt)
+7. Edit/Add event functionality (Kahlin) 
 
 # Emily
 ## NEW COMPLETIONS
-1.  Created Home page with login & signup buttons
-2.  Created Sign Up page
-3.  Updated index.php to route to corresponding page
+1. Created customer/admin profile page
+2. Added admin-only buttons to event list page
 ## CURRENT
-1.  Improving Home page aesthetic
+1. Creating GitHub wiki page
 ## NEXT
-1.  Mock up profile page
+1. Create footer for site pages
 
 # John
 ## NEW COMPLETIONS
-1.  Created message class
-2.  Created user class (creation and login/logout)
-3.  Created session class
+1. Fixed session saving bug
+2. Created event database schema
+3. Created signout page
+4. Added login log
+5. Linked login and create account forms to their respective functions
+6. Added logged in and is admin checks to protected pages
 ## CURRENT
-1.  Fix session saving bug
+1. Create entries for events from https://manoa.hawaii.edu/studentrec/outdoored/classes.html
 ## PENDING
-1.  Event database schema
+1. Create user guide
 
 # Kahlin
 ## NEW COMPLETIONS
-1.  Add event page
-2.  Edit event page
+1. Event Registration Page
 ## CURRENT
-1.  Registration page for events
-2.  Research Semantic UI calendar
+1. Implement Calendar Date Picker
 ## PENDING
-1.  Populating database with events
-2.  Insert php & SQL functionality into add & edit pages
+1. Edit/Add event functionality
 
 # Matt
 ## NEW COMPLETIONS
-1.  Basic Event list page
-2.  Basic Event page
+1. Event listing
+2. Navigation Bar
+3. Event Page
 ## CURRENT
-1.  Profile page for customer and admin
+1. Register event functionality (Matt)
 ## PENDING
-1.  Completely functioning event list page
-2.  Completely functioning event page
+1. Delete event functionality (Matt)
