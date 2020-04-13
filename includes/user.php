@@ -74,7 +74,7 @@ class user {
 
 		return bin2hex($binary_password_hash);
 	}
-	public function create_user($email, $password) {
+	public function create_user($email, $password, $confirm_password) {
 		global $current_time;
 		global $message;
 		global $database;
@@ -87,8 +87,12 @@ class user {
 			$error = "empty password";
 		} else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 			$error = "invalid email";
+		} else if (!preg_match("/^.*@hawaii.edu$/", $email)) {
+			$error = "please use your @hawaii.edu email";
 		} else if (!$this->test_password_complexity($password)) {
 			$error = "password must be 8 or more characters long and contain at least 1 uppercase letter, 1 lowercase letter and 1 digit";
+		} else if ($password != $confirm_password) {
+			$error = "password do not match";
 		} else {
 			$query = "SELECT `id` FROM `users` WHERE `email`=?;";
 			$array_variables = array(
@@ -123,6 +127,8 @@ class user {
 	}
 	public function process_login($email, $password) {
 		global $current_time;
+		global $ip_address;
+		global $user_agent_hash;
 		global $message;
 		global $database;
 		global $session;
@@ -150,6 +156,15 @@ class user {
 				$array_row = $database->fetch_array($result);
 
 				if ($this->hash_password($array_row["password_salt"], $password) == $array_row["password_hash"]) {
+					$query = "INSERT INTO `login_logs` (`created`, `ip_address`, `user_agent_hash`, `users_id`) VALUES (?, ?, ?, ?);";
+					$array_variables = array(
+						$current_time,
+						$ip_address,
+						$user_agent_hash,
+						$array_row["id"]
+					);
+					$result = $database->query($query, $array_variables);
+
 					$session->set("users_id", $array_row["id"]);
 					return true;
 				} else {

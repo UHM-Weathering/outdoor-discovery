@@ -8,14 +8,6 @@ $html = <<<END
     margin-left: 20px;
   }
 </style>
-<div>
-  <div style="position: relative;">
-    <h1 style="text-align: center; margin-top: 1em; margin-bottom: 1em;">OUTDOOR DISCOVERY</h1>
-    <a href="index.php?page=login" class="ui primary basic button" style="position: absolute; top: 50%; right: 50px; transform: translateY(-50%);">
-      Login
-    </a>
-  </div>
-</div>
 <div class="container" style="padding: 14rem 0; background: url('../images/surf.svg') no-repeat right 0, linear-gradient(180deg, rgba(253,250,207,0.3617822128851541) 0%, rgba(253,250,207,0) 100%); background-size: 37rem auto; background-color: white; background-position: 80% 60%; font-size: 1.3em;">
   <div style="margin: 0 auto; max-width: 90rem;">
     <div style="padding-right: 50rem; text-align: left">
@@ -37,9 +29,10 @@ $html = <<<END
 
 END;
 
-$user->create_user("test@example.com", "passwordA1");
-$user->process_login("test@example.com", "passwordA1");
+//$user->create_user("test@example.com", "passwordA1");
+//$user->process_login("test@example.com", "passwordA1");
 
+/* sample database queries
 // sample insert
 $query = "INSERT INTO `testing` (`created`, `data`) VALUES (?, ?);";
 $array_variables = array(
@@ -67,4 +60,5 @@ $array_variables = array(
 );
 $result = $database->query($query, $array_variables);
 $html .= "<div>Affected rows: " . $database->affected_rows() . "</div>\n";
+*/
 ?>

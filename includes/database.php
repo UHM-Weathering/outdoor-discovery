@@ -15,7 +15,12 @@ class database {
 		return true;
 	}
 	public function __destruct() {
+		global $session;
 		if (!$this->conn_errors()) {
+			if (isset($session)) {
+				$session->close();
+			}
+
 			$this->mysqli->close();
 		}
 

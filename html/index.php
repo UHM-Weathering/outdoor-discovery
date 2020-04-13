@@ -10,6 +10,8 @@ if (!isset($_GET["page"])) {
 	require_once(rtrim(dirname(__DIR__ . "../"), "/") . "/pages/addevent.php");
 } else if ($_GET["page"] == "signup") {
 	require_once(rtrim(dirname(__DIR__ . "../"), "/") . "/pages/signup.php");
+} else if ($_GET["page"] == "sign_out") {
+	require_once(rtrim(dirname(__DIR__ . "../"), "/") . "/pages/sign_out.php");
 } else if ($_GET["page"] == "eventlist") {
 	require_once(rtrim(dirname(__DIR__ . "../"), "/") . "/pages/eventlist.php");
 } else if ($_GET["page"] == "editevent") {
@@ -52,14 +54,11 @@ if (!isset($_GET["page"])) {
 </div>
 
 <?php
-echo $html;
-
-echo "<h2>Debug</h2>\n";
-
-unset($session); // will call __destruct() and allow for UPDATE query to be shown
+$session->close(); // allow for UPDATE sessions query to be shown, otherwise it happens in __destruct after page is sent to user
 $array_messages = $message->get();
 
 if (is_array($array_messages) && !empty($array_messages)) {
+	echo "<h2>Messages</h2>\n";
 	echo "<ul>\n";
 
 	foreach ($array_messages as $value) {
@@ -68,6 +67,8 @@ if (is_array($array_messages) && !empty($array_messages)) {
 
 	echo "</ul>\n";
 }
+
+echo $html;
 ?>
 </body>
 

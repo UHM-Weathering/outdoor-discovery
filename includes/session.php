@@ -1,6 +1,7 @@
 <?php
 
 class session {
+	private $closed = false;
 	private $session_uuid;
 	private $array_session_data = array();
 
@@ -12,15 +13,22 @@ class session {
 		}
 	}
 	public function __destruct() {
+		$this->close();
+	}
+	public function close() {
 		global $database;
+		global $message;
 
-		$query = "UPDATE `sessions` SET `data`=? WHERE `uuid`=?;";
-		$array_variables = array(
-			serialize($this->array_session_data),
-			$this->session_uuid
-		);
-		$result = $database->query($query, $array_variables);
-		return true;
+		if (!$this->closed) {
+$message->add("Session debug - " . print_r($this->array_session_data, true));
+			$this->closed = true;
+			$query = "UPDATE `sessions` SET `data`=? WHERE `uuid`=?;";
+			$array_variables = array(
+				serialize($this->array_session_data),
+				$this->session_uuid
+			);
+			$result = $database->query($query, $array_variables);
+		}
 	}
 	private function create_uuid() {
 		global $database;
@@ -130,7 +138,8 @@ class session {
 						);
 						$result = $database->query($query, $array_variables);
 
-						if ($result !== false && $database->affected_rows() === 1) {
+						//if ($result !== false && $database->affected_rows() === 1) { // if page is reloaded quickly or redirected, expires and last_active will be the same as the current values in the database, thus affected_rows = 0
+						if ($result !== false) {
 							$this->session_uuid = $_COOKIE["session"];
 							setcookie("session", $_COOKIE["session"], $expires, "", "", true, true); // secure and http only flags set
 							return true;
