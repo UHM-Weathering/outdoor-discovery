@@ -17,7 +17,9 @@ if (!isset($_GET["page"])) {
 } else if ($_GET["page"] == "editevent") {
 	require_once(rtrim(dirname(__DIR__ . "../"), "/") . "/pages/editevent.php");
 } elseif ($_GET["page"] == "profile") {
-    require_once(rtrim(dirname(__DIR__ . "../"), "/") . "/pages/profile.php");
+	require_once(rtrim(dirname(__DIR__ . "../"), "/") . "/pages/profile.php");
+} elseif ($_GET["page"] == "event") {
+	require_once(rtrim(dirname(__DIR__ . "../"), "/") . "/pages/event.php");
 } else {
 	require_once(rtrim(dirname(__DIR__ . "../"), "/") . "/pages/404.php");
 }

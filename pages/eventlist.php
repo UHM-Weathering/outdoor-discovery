@@ -26,7 +26,7 @@ $html .= <<<END
       <img src="https://images.freeimages.com/images/large-previews/5c1/beer-1326297.jpg">
     </div>
     <div class="content">
-      <a class="header">12 Years a Slave</a>
+      <a href="index.php?page=event" class="header">12 Years a Slave</a>
       <div class="meta">
         <span class="cinema">Union Square 14</span>
       </div>
@@ -60,7 +60,7 @@ $html .= <<<END
     <img src="https://images.freeimages.com/images/large-previews/5c1/beer-1326297.jpg">
   </div>
   <div class="content">
-    <a class="header">My Neighbor Totoro</a>
+    <a href="index.php?page=event" class="header">My Neighbor Totoro</a>
     <div class="meta">
       <span class="cinema">IFC Cinema</span>
     </div>
@@ -92,7 +92,7 @@ $html .= <<<END
     <img src="https://images.freeimages.com/images/large-previews/5c1/beer-1326297.jpg">
   </div>
   <div class="content">
-    <a class="header">Watchmen</a>
+    <a href="index.php?page=event" class="header">Watchmen</a>
     <div class="meta">
       <span class="cinema">IFC</span>
     </div>
