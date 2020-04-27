@@ -37,6 +37,17 @@ $html = <<<END
         <label>Password</label>
         <input type="password" name="password" placeholder="Password">
       </div>
+      <div class="ui tiny message">
+        <div class="header">
+          Password must contain:
+        </div>
+        <ul class="ui list">
+          <li>At least 8 characters</li>
+          <li>At least 1 uppercase letter</li>
+          <li>At least 1 lowercase letter</li>
+          <li>At least 1 digit</li>
+        </ul>
+      </div>
       <div class="field">
         <label>Confirm Password</label>
         <input type="password" name="password2" placeholder="Confirm Password">
