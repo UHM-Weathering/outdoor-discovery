@@ -44,11 +44,8 @@ $html = <<<END
             <th rowspan="2">Date & Time</th>
             <th rowspan="2">Openings</th>
             <th colspan="2">Registration</th>
-            <th colspan="2">Payment</th>
           </tr>
           <tr>
-            <th>Deadline</th>
-            <th>Status</th>
             <th>Deadline</th>
             <th>Status</th>
           </tr>
@@ -59,13 +56,12 @@ $html = <<<END
             <td data-label="Openings">4</td>
             <td>Apr 19 Sun @ 7:30am</td>
             <td class="center aligned">
+              <button class="ui right floated small green button">Register</button>
+<!--
               <div class="ui checked fitted checkbox">
                 <input type="checkbox"> <label></label>
               </div>
-            </td>
-            <td>Apr 19 Sun @ 7:30am</td>
-            <td class="center aligned">
-              <i class="large red attention icon"></i>
+-->
             </td>
           </tr>
           <tr>
@@ -73,18 +69,16 @@ $html = <<<END
             <td data-label="Openings">6</td>
             <td>May 1 Fri @ 3:00pm</td>
             <td class="center aligned">
-              <div class="ui fitted checkbox">
-                <input type="checkbox"> <label></label>
-              </div>
-            </td>
-            <td>May 1 Fri @ 3:00pm</td>
-            <td class="center aligned">
+              <button class="ui right floated small green button">Register</button>
+<!--
+                          <div class="ui checked fitted checkbox">
+                            <input type="checkbox"> <label></label>
+                          </div>
+-->
             </td>
           </tr>
         </tbody>
       </table>
-
-
 
 <!--
         <div class="ui large relaxed list">

@@ -37,6 +37,9 @@ while($array_row = $database->fetch_array($result)) {
       </div>
       <div class="content">
         <a href="index.php?page=event" class="header">' . $array_row["event_name"] . '</a>
+        <div class="meta">
+          <span class="time">' . $array_row["event_start"] . " - " . $array_row["event_end"] . '</span>
+        </div>
         <div class="description">
           <p>' . $array_row["description"] . '</p>
         </div>

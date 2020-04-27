@@ -46,45 +46,32 @@ $html = <<<END
       <div class="ui segment" style="margin-bottom: 40px">
         <h3>Registered Events</h3>
         <div class="ui relaxed list">
+
+END;
+
+
+$query = "SELECT `id`, `created`, `event_name`, `description` FROM `events`;";
+$result = $database->query($query);
+
+while($array_row = $database->fetch_array($result)) {
+	// $html .= "<div>Row: " . $array_row["id"] . ", " . $array_row["created"] . ", " . $array_row["event_name"] . ", " . $array_row["description"] . "</div>\n";
+  $html .= '
           <div class="item">
             <div class="ui grid">
               <div class="ten wide column">
                 <div class="content">
-                  <a href="index.php?page=event" class="header">Event 1</a>
-                  An excellent event.
+                  <a href="index.php?page=event" class="header">' . $array_row["event_name"] . '</a>
+                  ' . $array_row["description"] . '
                 </div>
               </div>
               <div class="six wide column">
                 <button class="ui right floated small button">Unregister</button>
               </div>
             </div>
-          </div>
-          <div class="item">
-            <div class="ui grid">
-              <div class="ten wide column">
-                <div class="content">
-                  <a href="index.php?page=event" class="header">Event 2</a>
-                  An excellent event.
-                </div>
-              </div>
-              <div class="six wide column">
-                <button class="ui right floated small button">Unregister</button>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="ui grid">
-              <div class="ten wide column">
-                <div class="content">
-                  <a href="index.php?page=event" class="header">Event 3</a>
-                  An excellent event.
-                </div>
-              </div>
-              <div class="six wide column">
-                <button class="ui right floated small button">Unregister</button>
-              </div>
-            </div>
-          </div>
+          </div>';
+}
+
+$html .= <<<END
         </div>
       </div>
     </div>
