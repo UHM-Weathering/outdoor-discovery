@@ -3,6 +3,8 @@ In this assignment, we have improved the functionality of our app.
 Our project's GitHub can be found here: https://github.com/UHM-Weathering/outdoor-discovery
 Our project's wiki page can be found here:
 https://github.com/UHM-Weathering/outdoor-discovery/wiki
+Outdoor Discovery v.01:
+https://github.com/UHM-Weathering/outdoor-discovery/releases/tag/0.1
 
 INSTALLATION
 To install Outdoor Discovery, you must first have a web server with MySQL and PHP installed.  We recommend using a LAMP stack on Ubuntu 18.04.
