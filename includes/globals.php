@@ -17,8 +17,10 @@ require_once("database.php");
 require_once("message.php");
 require_once("session.php");
 require_once("user.php");
+require_once("event.php");
 
 $message = new message;
 $database = new database;
 $session = new session;
 $user = new user;
+$event = new event;
