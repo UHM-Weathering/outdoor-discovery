@@ -8,7 +8,7 @@ $html = <<<END
     margin-left: 20px;
   }
 </style>
-<div class="container" style="padding: 14rem 0; background: url('../images/surf.svg') no-repeat right 0, linear-gradient(180deg, rgba(253,250,207,0.3617822128851541) 0%, rgba(253,250,207,0) 100%); background-size: 37rem auto; background-color: white; background-position: 80% 60%; font-size: 1.3em;">
+<div class="container" style="padding: 14rem 0; background: url('../html/images/surf.svg') no-repeat right 0, linear-gradient(180deg, rgba(253,250,207,0.3617822128851541) 0%, rgba(253,250,207,0) 100%); background-size: 37rem auto; background-color: white; background-position: 80% 60%; font-size: 1.3em;">
   <div style="margin: 0 auto; max-width: 90rem;">
     <div style="padding-right: 50rem; text-align: left">
       <h1 style="font-size: 3rem; line-height: 1.5;">Explore the island of Oahu</h1>

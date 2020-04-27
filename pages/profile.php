@@ -22,7 +22,7 @@ $html = <<<END
     <div class="five wide column">
       <div class="ui fluid card">
         <div class="image">
-          <img src="../images/surf.svg">
+          <img src="../html/images/surf.svg">
         </div>
         <div class="content">
           <a class="header">Dewey Havtoo</a>
