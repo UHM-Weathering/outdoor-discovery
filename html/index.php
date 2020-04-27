@@ -105,6 +105,8 @@ if (!isset($_GET["page"])) {
 	</div>
 	<div style="height: 40px;"></div>
 </div>
+  
+
 
 <?php
 $session->close(); // allow for UPDATE sessions query to be shown, otherwise it happens in __destruct after page is sent to user
@@ -123,6 +125,33 @@ if (is_array($array_messages) && !empty($array_messages)) {
 
 echo $html;
 ?>
+  
+  
+
+<div class="footer" style="position: sticky; left: 0; bottom: 0; width: 100%; background-color: #f5f5f5; text-align: center">
+  <div class="ui center aligned container" style="padding-top: 10px; padding-bottom: 10px">
+    <div class="ui grid">
+      <div class="eight wide column">
+        <h4 class="ui header">Navigation</h4>
+        <div class="ui link list">
+          <a class="item" href="index.php">Home</a>
+          <a class="item" href="index.php?page=eventlist">Events</a>
+          <a class="item" href="index.php?page=profile">Profile</a>
+        </div>
+      </div>
+      <div class="eight wide column">
+        <h4 class="ui header">Learn More</h4>
+        <div class="ui link list">
+          <a class="item" href="https://github.com/UHM-Weathering/outdoor-discovery">GitHub</a>
+          <a class="item" href="https://github.com/UHM-Weathering/outdoor-discovery/wiki">Wiki</a>
+        </div>
+      </div>
+    </div>
+    <div class="ui section divider"></div>
+    <p>Created for ICS 427</p>
+  </div>
+
+</div>
 </body>
 
 </html>

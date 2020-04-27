@@ -115,9 +115,9 @@ if ($user->is_admin_user()) {
 END;
 }
 $html .= <<<END
+      </div>
     </div>
   </div>
 </div>
-
 END;
 ?>
